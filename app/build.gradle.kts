@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.draganddropwithswipe"
-        minSdk = 24
+        minSdk = 25
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -69,8 +69,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Extended Icons
+    // Material
     implementation(libs.androidx.material.icons.extended)
+    implementation(libs.androidx.compose.material)
 
     // Dagger - Hilt
     implementation(libs.hilt.android)
