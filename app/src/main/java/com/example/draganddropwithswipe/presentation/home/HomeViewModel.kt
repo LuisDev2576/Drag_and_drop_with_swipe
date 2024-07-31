@@ -30,7 +30,10 @@ class HomeViewModel @Inject constructor() : ViewModel() {
         ))
     val itemList get() = _itemList
 
-    fun removeItemById(id: String) {
-        _itemList = _itemList.filter { it.id != id }
+    fun moveItem(fromIndex: Int, toIndex: Int) {
+        val mutableList = _itemList.toMutableList()
+        val item = mutableList.removeAt(fromIndex)
+        mutableList.add(toIndex, item)
+        _itemList = mutableList
     }
 }
